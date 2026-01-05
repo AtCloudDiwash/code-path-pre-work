@@ -1,0 +1,43 @@
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    color: #fff;
+    position: fixed;
+}
+
+.container{
+    width: 600px;
+    height: 400px;
+    font-family: var(--primary-font), sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--padding-dialog);
+    padding-left: var(--padding-1);
+    padding-right: var(--padding-1);
+    padding-top: var(--padding-1);
+}
+
+.closeContainer{
+    width: 100%;
+    cursor: pointer;
+}
+
+.close{
+    font-size: var(--font-size-1);
+}
+
+.description{
+    font-weight: 600;
+}
+
+.userActionBtns{
+    display: flex;
+    gap: var(--gap-1);
+}

@@ -1,0 +1,6 @@
+.globe{
+    position: fixed;
+    z-index: -2;
+    opacity: .25;
+    transform: scale(1.8);
+}

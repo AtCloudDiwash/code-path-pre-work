@@ -1,0 +1,42 @@
+.btn{
+    outline: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius-button);
+    font-size: var(--font-size-1);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-button);
+    color: #fff;
+    font-family: var(--primary-font), sans-serif;
+    font-size: var(--font-size-1);
+    cursor: pointer;
+}
+
+
+
+.danger{
+    background-color: var(--danger-color);
+    border: none;
+}
+
+button:focus,
+button:active,
+button:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+.primary{
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.revertedPrimary{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+}
+
+.revertedDanger{
+    background-color: transparent;
+    border: 2px solid var(--danger-color);
+}
