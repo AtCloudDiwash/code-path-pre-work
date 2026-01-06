@@ -35,7 +35,7 @@ function App() {
     },
     {
       path: "/new",
-      element: <AddCreator purpose="Add"/>
+      element: <AddCreator purpose="add"/>
     },
     {
       path: "/takequiz",
