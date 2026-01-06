@@ -40,7 +40,6 @@ Here's a walkthrough of implemented required features:
 [▶️ Video Walkthrough](https://www.loom.com/share/996c7bfae7e8401895035c1802e673d3)
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 GIF tool here
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
