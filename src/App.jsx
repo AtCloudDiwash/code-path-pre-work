@@ -34,6 +34,10 @@ function App() {
       element: <AddCreator purpose="Update"/>
     },
     {
+      path: "/new/:creatorId",
+      element: <AddCreator purpose="Add"/>
+    },
+    {
       path: "/takequiz",
       element: <Quiz/>
     }

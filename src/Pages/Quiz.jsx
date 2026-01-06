@@ -2,6 +2,17 @@ import { useEffect, useState } from 'react';
 import styles from "../Styles/quiz.module.css";
 import {Button, RevertedButton} from "../Components/Button";
 
+
+
+/**
+ * To make this Quiz System more interesting one can query top 100 records from supbase 'creators' table. Now,
+ * after gettings the records any 5 creators are picked in a pseudo-random way. After making the choice, the choices 
+ * can be sent in a specific format to an api endpoint where an LLM is running. The LLM takes the data and generates
+ * 5 or according to the choice of numbers of question. The generated content by LLM can then be received as a response
+ * at the frontend and it can be set as the value of quizData
+ * 
+ */
+
 const quizData = [
   {
     question: "What is MrBeast's real name?",
