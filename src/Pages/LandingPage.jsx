@@ -32,7 +32,7 @@ export default function LandingPage() {
                 y: (window.innerHeight / 2) * .95,
                 duration: .6,
             }).to(curtainRef.current, {
-                y: -window.innerHeight,
+                y: -window.innerHeight*2,
                 duration: .5
             }).from(`.${styles.char}`, {
                 y: 40,
