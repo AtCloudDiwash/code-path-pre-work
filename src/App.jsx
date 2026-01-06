@@ -34,7 +34,7 @@ function App() {
       element: <AddCreator purpose="Update"/>
     },
     {
-      path: "/new/:creatorId",
+      path: "/new",
       element: <AddCreator purpose="Add"/>
     },
     {
