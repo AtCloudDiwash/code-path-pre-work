@@ -39,6 +39,9 @@ Here's a walkthrough of implemented required features:
 
 [▶️ Video Walkthrough](https://www.loom.com/share/996c7bfae7e8401895035c1802e673d3)
 
+Check out the live site here: [Creator Verse](https://code-path-pre-work-zp67.vercel.app/)
+
+
 <!-- Replace this with whatever GIF tool you used! -->
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
