@@ -3,17 +3,17 @@ import { useState, useRef, useEffect } from "react";
 import { InstagramLogo, XLogo, YtLogo } from "../utils/iconProvider"
 import styles from "../Styles/addcreator.module.css";
 import DialogBox from "../Components/DialogBox";
-import {Button} from '../Components/Button';
+import { Button } from '../Components/Button';
 import { supabase } from '../client';
 import { useParams } from 'react-router-dom';
 import ErrorBox from '../Components/ErrorBox';
 import SuccessBox from '../Components/SuccessBox';
 
 
-export default function AddCreator({purpose = "add"}) {
+export default function AddCreator({ purpose = "add" }) {
 
 
-    const {creatorId} = useParams();
+    const { creatorId } = useParams();
 
     const mediaUrls = useRef({
         X: "",
@@ -44,6 +44,21 @@ export default function AddCreator({purpose = "add"}) {
     };
 
     async function handleAddCreator() {
+
+        if (
+            !creatorNameRef.current.value ||
+            !creatorDescriptionRef.current.value ||
+            !imageUrlRef.current.value ||
+            !xLinkRef.current.value ||
+            !ytLinkRef.current.value ||
+            !instagramLinkRef.current.value
+        ) {
+            setErrorMsg("All fields are required");
+            setTimeout(() => {
+                setErrorMsg("");
+            }, 2000);
+            return;
+        }
         mediaUrls.current = {
             X: xLinkRef.current.value,
             Youtube: ytLinkRef.current.value,
@@ -65,14 +80,18 @@ export default function AddCreator({purpose = "add"}) {
             } else {
                 setErrorMsg("Cannot add creator. An error occurred. Try again.");
             }
+            setTimeout(() => { setErrorMsg("") }, 2000);
             setSuccessMsg("");
         } else {
             setSuccessMsg("You have added the creator successfully!");
+            setTimeout(() => {
+                setSuccessMsg("")
+            }, 2000);
             setErrorMsg("");
         }
     }
 
-    function handleUpdateCreator(){
+    function handleUpdateCreator() {
         setShowDialog(true);
     }
 
@@ -99,29 +118,29 @@ export default function AddCreator({purpose = "add"}) {
             setErrorMsg("Cannot update creator. An error occurred. Try again.");
             setShowTransitState("error");
             setSuccessMsg("");
-            setTimeout(()=>{
+            setTimeout(() => {
                 setErrorMsg("");
             }, 2000);
         } else {
             setSuccessMsg("You have updated the creator successfully!");
             setShowTransitState("success");
             setErrorMsg("");
-            setTimeout(()=>{
+            setTimeout(() => {
                 setSuccessMsg("");
             }, 2000);
         }
     }
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        if(purpose === "add") return;
+        if (purpose === "add") return;
 
-        async function getCreatorDetails(){
+        async function getCreatorDetails() {
             setErrorMsg(null);
             const { data, error } = await supabase.from("creators").select("*").eq("id", creatorId).single();
 
-            if(error){
+            if (error) {
                 setErrorMsg("There was an error getting creator's details");
             } else {
                 creatorNameRef.current.value = data.name;
@@ -139,40 +158,40 @@ export default function AddCreator({purpose = "add"}) {
 
     return (
         <>
-            {errorMsg && <ErrorBox message={errorMsg}/>}
-            {successMsg && <SuccessBox message={successMsg}/>}
-            {showDialog && <DialogBox description = "Do you want to continue this action ?" onResponse = {handleDialogResponse}/>}
+            {errorMsg && <ErrorBox message={errorMsg} />}
+            {successMsg && <SuccessBox message={successMsg} />}
+            {showDialog && <DialogBox description="Do you want to continue this action ?" onResponse={handleDialogResponse} />}
 
             <div className={styles.wrapper}>
                 <form className={styles.container}>
                     <div className={styles.pageTitleWrapper}>
-                        <h2 className={styles.pageTitle}>{purpose != "add"? `${purpose} Your Creator`:"Add Your Creator"}</h2>
+                        <h2 className={styles.pageTitle}>{purpose != "add" ? `${purpose} Your Creator` : "Add Your Creator"}</h2>
                     </div>
                     <div>
                         <label>Name</label>
-                        <input ref={creatorNameRef} type="text" placeholder="Enter your name" />
+                        <input ref={creatorNameRef} type="text" placeholder="Enter your name" required />
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea ref={creatorDescriptionRef} placeholder="Write a description"></textarea>
+                        <textarea ref={creatorDescriptionRef} placeholder="Write a description" required></textarea>
                     </div>
                     <div>
                         <label>Image Link</label>
-                        <input ref={imageUrlRef} type="text" placeholder="Paste Creator's image link" />
+                        <input ref={imageUrlRef} type="text" placeholder="Paste Creator's image link" required />
                     </div>
                     <div>
                         <label>X Link <XLogo /></label>
-                        <input ref={xLinkRef} type="text" placeholder="Paste X profile's link" />
+                        <input ref={xLinkRef} type="text" placeholder="Paste X profile's link" required />
                     </div>
                     <div>
                         <label>Youtube Link <YtLogo /></label>
-                        <input ref={ytLinkRef} type="text" placeholder="Paste Youtube profile's link" />
+                        <input ref={ytLinkRef} type="text" placeholder="Paste Youtube profile's link" required />
                     </div>
                     <div>
                         <label>Instagram Link <InstagramLogo /></label>
-                        <input ref={instagramLinkRef} type="text" placeholder="Paste Instagram profile's link" />
+                        <input ref={instagramLinkRef} type="text" placeholder="Paste Instagram profile's link" required />
                     </div>
-                    <Button bTitle={purpose === "Update"? "Update Creator":"Add Creator"} onResponse={purpose === "Update"?handleUpdateCreator: handleAddCreator}/>
+                    <Button bTitle={purpose === "Update" ? "Update Creator" : "Add Creator"} onResponse={purpose === "Update" ? handleUpdateCreator : handleAddCreator} />
                 </form>
             </div>
 
