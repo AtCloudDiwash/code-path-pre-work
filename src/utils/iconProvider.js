@@ -5,5 +5,6 @@ import { IoMdInformationCircleOutline as InfoLogo } from "react-icons/io";
 import { MdDelete as DeleteIcon} from "react-icons/md";
 import { MdError as ErrorIcon } from "react-icons/md";
 import { SiTicktick as TickIcon} from "react-icons/si";
+import { FaArrowRight as ArrowIcon} from "react-icons/fa";
 
-export {XLogo, InstagramLogo, YtLogo, EditLogo, InfoLogo, DeleteIcon, ErrorIcon, TickIcon}
+export {XLogo, InstagramLogo, YtLogo, EditLogo, InfoLogo, DeleteIcon, ErrorIcon, TickIcon, ArrowIcon}

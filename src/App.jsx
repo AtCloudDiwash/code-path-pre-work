@@ -10,6 +10,7 @@ import SuccessBox from "./Components/SuccessBox";
 import ErrorBox from "./Components/ErrorBox";
 import ShowAllCreator from "./Pages/ShowAllCreator";
 import LandingPage from "./Pages/LandingPage";
+import Quiz from "./Pages/Quiz";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,28 +30,12 @@ function App() {
       element: <ErrorPage/>
     },
     {
-      path: "/button",
-      element: <RevertedButton bTitle={"Delete"} Icon={DeleteIcon} type="primary"/>
-    },
-    {
-      path: "/dialog",
-      element: <DialogBox description={"Do you want to continue this action"}/>
-    }, 
-    {
-      path: "/new",
-      element: <AddCreator/>
-    },
-    {
-      path: "/success",
-      element: <SuccessBox/>
-    },
-    {
-      path: "/error",
-      element: <ErrorBox/>
-    },
-    {
       path: "/edit/:creatorId",
       element: <AddCreator purpose="Update"/>
+    },
+    {
+      path: "/takequiz",
+      element: <Quiz/>
     }
   ])
 }

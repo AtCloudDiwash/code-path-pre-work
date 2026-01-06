@@ -1,3 +1,25 @@
+.curtain{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #000;
+    z-index: 99;
+}
+
+.arrowWrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.arrowWrapper > *{
+    position: absolute;
+    transform: scale(1.4) translateX(-100%);
+}
+
 .landingSection{
     width: 100%;
     height: 100vh;
@@ -11,11 +33,13 @@
 .userActionBtns{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: var(--gap-1);
+    flex-wrap: wrap;
 }
 
 .heroText{
-    font-size: var(--font-size-lg)
+    font-size: var(--font-size-lg);
 }
 
 .navbar{
@@ -46,4 +70,18 @@
 
 .globe{
     position: absolute;
+}
+
+.char{
+    display: inline-block;
+}
+
+
+
+@media (max-width: 576px) {
+
+    .heroText{
+        font-size: 40px;
+    }
+
 }

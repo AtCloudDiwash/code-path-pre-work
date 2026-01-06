@@ -123,7 +123,7 @@ export default function ViewCreator({creatorName, creatorDescription, imageUrl, 
                 <div className={styles.socialMediaLinks} target = "_blank">
                     <div>
                         <a href={`${creatorDetail.url&&JSON.parse(creatorDetail.url).X}`}>
-                            <XLogo className={styles.socialLogo} onClick={useNavigate()}/> <span className={styles.socialLabel}>{extractAccountName(creatorDetail.url&&JSON.parse(creatorDetail.url).X) || "X account name"}</span>
+                            <XLogo className={styles.socialLogo}/> <span className={styles.socialLabel}>{extractAccountName(creatorDetail.url&&JSON.parse(creatorDetail.url).X) || "X account name"}</span>
                         </a>
                     </div>
                     <div>
@@ -142,7 +142,7 @@ export default function ViewCreator({creatorName, creatorDescription, imageUrl, 
                 </p>
                 <div className={styles.userActions}>
                     <div><Button bTitle={"Delete"} Icon = {DeleteIcon} type="danger" onResponse={handleDeleteResponse}/></div>
-                    <div><Button bTitle={"Edit"} Icon = {EditLogo} type="primary" onResponse={()=>{navigate(`/edit:${creatorId}`)}}/></div>
+                    <div><Button bTitle={"Edit"} Icon = {EditLogo} type="primary" onResponse={()=>{navigate(`/edit/${creatorId}`)}}/></div>
                 </div>
             </div>
 
