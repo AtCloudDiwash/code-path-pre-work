@@ -17,19 +17,21 @@ The following **required** functionality is completed:
 - [X] **API calls use the async/await design pattern via Axios or fetch()**
 - [X] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
 - [X] **Each content creator has their own unique URL**
-- [ ] **The user can edit a content creator to change their name, url, or description**
-- [ ] **The user can delete a content creator**
-- [ ] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
+- [X] **The user can edit a content creator to change their name, url, or description**
+- [X] **The user can delete a content creator**
+- [X] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
 
 The following **optional** features are implemented:
 
-- [ ] Picocss is used to style HTML elements
-- [ ] The content creator items are displayed in a creative format, like cards instead of a list
-- [ ] An image of each content creator is shown on their content creator card
+- [X] Picocss is used to style HTML elements
+- [X] The content creator items are displayed in a creative format, like cards instead of a list
+- [X] An image of each content creator is shown on their content creator card
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [X] Used GSAP library to build some landing page animation
+* [X] Implemented a new useRoute called /takequiz which displays set of questions that users can use to test their knowledge
+
 
 ## Video Walkthrough
 
@@ -50,7 +52,7 @@ Describe any challenges encountered while building the app or any additional con
 
 ## License
 
-Copyright [👉🏿 yyyy] [👉🏿 name of copyright owner]
+Copyright [👉🏿 2026] [👉🏿 Diwash Kuskusmiya]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
