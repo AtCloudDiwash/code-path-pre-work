@@ -2,9 +2,9 @@
 
 Submitted by: **👉🏿 Diwash Kuskusmiya**
 
-About this web app: **👉🏿 app description here**
+About this web app: **👉🏿 Creator Verse is a platform where you can discover and explore content creators. Browse through profiles to see their descriptions and social links, add new creators, edit existing profiles, and even take quizzes to test your knowledge about them. It’s a fun and interactive way to stay connected with the world of creators!**
 
-Time spent: **👉🏿 less than 14** hours
+Time spent: **👉🏿 less than 15** hours
 
 ## Required Features
 
@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[▶️ Video Walkthrough](https://www.loom.com/share/996c7bfae7e8401895035c1802e673d3)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 GIF tool here
@@ -48,7 +48,15 @@ GIF created with ...  👉🏿 GIF tool here
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+There were three main challenges while building this website. 
+
+First was my overall design and development approach. I initialy started this project with a mindset of completing the required parts only. Hence, I chose to go with inline styling because it felt quicker and easy at the beginning, but as new ideas keep coming it became harder for me to manage continuous improvements. Then, I decided to restart with a fresh figma design and rebuilt all the components of the app.
+
+Second challenge was implementing the landing animation and building the quiz board. I had to experimet with a few workarounds, and the styling proecess was a bit hectic, overall. I believe the quiz part can be improved more.
+
+Third was the classic "works on my machine" problem. when I deployed my project to vercel, few app routes were crashing and behaving unexpectedly. It took me adding a vercel.json to handle the configuration and solve the but. 
+
+Overall, it was fun and a good learning experience while working in this project. I always try to reflect my personality and skills in my work, and try to build with fun and passion.
 
 ## License
 
